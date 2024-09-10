@@ -1,0 +1,34 @@
+---
+import { profileConfig } from "@config";
+import { url } from "@utils/url-utils";
+---
+
+<div
+  class="card-base mx-auto flex min-h-[4.5rem] max-w-[var(--page-width)] items-center rounded-b-none px-6"
+>
+  <div class="text-50 text-sm transition">
+    © 2024 {profileConfig.name}. All Rights Reserved. /
+    <a
+      class="link font-medium text-[var(--primary)]"
+      target="_blank"
+      href={url("rss.xml")}>RSS</a
+    > /
+    <a
+      class="link font-medium text-[var(--primary)]"
+      target="_blank"
+      href={url("sitemap-index.xml")}>Sitemap</a
+    >
+    <br />
+    Powered by
+    <a
+      class="link font-medium text-[var(--primary)]"
+      target="_blank"
+      href="https://astro.build">Astro</a
+    > &
+    <a
+      class="link font-medium text-[var(--primary)]"
+      target="_blank"
+      href="https://github.com/saicaca/fuwari">Fuwari</a
+    >
+  </div>
+</div>

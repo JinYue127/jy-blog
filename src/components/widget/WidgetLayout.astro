@@ -1,0 +1,93 @@
+---
+import { ScrollArea } from "@components/ui/scroll-area";
+import { Icon } from "astro-icon/components";
+interface Props {
+  id: string;
+  name?: string;
+  isCollapsed?: boolean;
+  collapsedHeight?: string;
+  class?: string;
+  style?: string;
+  categoriesCount?: number;
+  tagsCount?: number;
+  type?: "categories" | "tags";
+}
+
+const {
+  id,
+  name,
+  isCollapsed,
+  collapsedHeight,
+  style,
+  categoriesCount = 5,
+  tagsCount = 20,
+  type,
+} = Astro.props;
+const className = Astro.props.class;
+---
+
+<widget-layout
+  data-id={id}
+  data-is-collapsed={String(isCollapsed)}
+  class={"pb-4 card-base " + className}
+  style={style}
+>
+  <div
+    class="relative mb-2 ml-8 mt-4 text-lg font-bold text-neutral-900 transition before:absolute before:left-[-16px] before:top-[5.5px] before:h-4 before:w-1 before:rounded-md before:bg-[var(--primary)] dark:text-neutral-100"
+  >
+    {name}
+  </div>
+
+  {
+    ((type === "categories" && categoriesCount > 5) ||
+      (type === "tags" && tagsCount > 20)) && (
+      <div class="flex flex-col items-center justify-center">
+        <ScrollArea
+          client:only="react"
+          className="h-56 rounded-md border-none p-4"
+        >
+          <slot />
+        </ScrollArea>
+        <Icon
+          name="material-symbols:more-horiz"
+          class="text-[1.75rem] text-gray-400"
+        />
+      </div>
+    )
+  }
+
+  {
+    ((type === "categories" && categoriesCount < 6) ||
+      (type === "tags" && tagsCount < 21)) && (
+      <div id={id} class="px-4">
+        <slot />
+      </div>
+    )
+  }
+</widget-layout>
+
+<style define:vars={{ collapsedHeight }}>
+  .collapsed {
+    height: var(--collapsedHeight);
+  }
+</style>
+
+<script>
+  class WidgetLayout extends HTMLElement {
+    constructor() {
+      super();
+
+      if (this.dataset.isCollapsed !== "true") return;
+
+      const id = this.dataset.id;
+      const btn = this.querySelector(".expand-btn");
+      const wrapper = this.querySelector(`#${id}`);
+      btn!.addEventListener("click", () => {
+        wrapper!.classList.remove("collapsed");
+        btn!.classList.add("hidden");
+      });
+    }
+  }
+
+  customElements.define("widget-layout", WidgetLayout);
+</script>
