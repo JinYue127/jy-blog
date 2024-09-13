@@ -2,7 +2,7 @@
 title: Markdown next
 published: 2024-09-09
 description: 这是一篇 Markdown 文章的示例。展示了 Markdown 的语法和渲染效果。
-tags: [ Markdown, Blogging, Demo ]
+tags: [Markdown, Blogging, Demo]
 category: Examples
 draft: false
 comments: true
@@ -49,7 +49,7 @@ All work and no play makes Jack a dull boy.
 
 带标题的图片
 
-![图片描述](https://picsum.photos/seed/picsum/400/300 '图片标题')
+![图片描述](https://picsum.photos/seed/picsum/400/300 "图片标题")
 
 ## 强调
 

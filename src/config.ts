@@ -50,7 +50,7 @@ export const navBarConfig: NavBarConfig = {
 };
 
 export const profileConfig: ProfileConfig = {
-  avatar: siteConfig.url + "/android-chrome-512x512.png", // Relative to the /src directory. Relative to the /public directory if it starts with '/'
+  avatar: "https://www.helloimg.com/i/2024/09/13/66e3deebaa69e.jpg", // Relative to the /src directory. Relative to the /public directory if it starts with '/'
   name: "Jin Yue",
   bio: "A Frontend Developer",
   twitterId: "test",

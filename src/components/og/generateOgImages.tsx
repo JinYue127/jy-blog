@@ -4,19 +4,7 @@ import { type CollectionEntry } from "astro:content";
 import postOgImage from "./post";
 import siteOgImage from "./site";
 import { getIconCode, loadEmoji } from "./twemoji";
-import { siteConfig } from "@config";
-
-const fetchFonts = async () => {
-  // Regular Font
-  const fontFileRegular = await fetch(
-    `${siteConfig.url}fonts/zcool-kuaile-chinese-simplified-400-normal.woff`,
-  );
-  const fontRegular: ArrayBuffer = await fontFileRegular.arrayBuffer();
-
-  return { fontRegular };
-};
-
-const { fontRegular } = await fetchFonts();
+import ZcoolKuaile from "node_modules/@fontsource/zcool-kuaile/files/zcool-kuaile-chinese-simplified-400-normal.woff";
 
 const options: SatoriOptions = {
   width: 1200,
@@ -24,8 +12,8 @@ const options: SatoriOptions = {
   embedFont: true,
   fonts: [
     {
-      name: "ZCOOL KuaiLe",
-      data: fontRegular,
+      name: "ZcoolKuaile",
+      data: Buffer.from(ZcoolKuaile),
       weight: 400,
       style: "normal",
     },

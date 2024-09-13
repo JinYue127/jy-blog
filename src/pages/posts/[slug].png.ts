@@ -15,7 +15,10 @@ export const GET: APIRoute = async ({ props }) => {
   return new Response(
     await generateOgImageForPost(props as CollectionEntry<"posts">),
     {
-      headers: { "Content-Type": "image/png" },
+      headers: {
+        "Content-Type": "image/png",
+        "Cache-Control": "public, max-age=31536000, immutable",
+      },
     },
   );
 };

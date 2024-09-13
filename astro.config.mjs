@@ -28,6 +28,7 @@ import { remarkModifiedTime } from "./src/plugins/remark-modified-time.mjs";
 import { remarkReadingTime } from "./src/plugins/remark-reading-time.mjs";
 import { remarkEmbed } from "./src/plugins/remarkEmbed.mjs";
 import { remarkSpoiler } from "./src/plugins/remarkSpoiler.mjs";
+import { rawFonts } from "./src/plugins/vite-raw-fonts.mjs";
 
 const oklchToHex = (str) => {
   const DEFAULT_HUE = 250;
@@ -168,6 +169,7 @@ export default defineConfig({
     optimizeDeps: {
       exclude: ["@resvg/resvg-js"],
     },
+    plugins: [rawFonts([".woff2", ".ttf", ".woff", ".otf"])],
     css: {
       preprocessorOptions: {
         stylus: {
