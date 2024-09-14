@@ -4,29 +4,34 @@ import { url } from "@utils/url-utils";
 ---
 
 <div
-  class="card-base mx-auto flex min-h-[4.5rem] max-w-[var(--page-width)] items-center rounded-b-none px-6"
+  class="mx-32 my-10 border-t border-dashed border-black/10 transition dark:border-white/15"
+>
+</div>
+<div
+  class="mb-12 flex flex-col items-center justify-center rounded-2xl border-dashed border-[oklch(85%_0.01_var(--hue))] px-6 transition dark:border-white/15"
 >
   <div class="text-50 text-sm transition">
     © 2024 {profileConfig.name}. All Rights Reserved. /
     <a
-      class="link font-medium text-[var(--primary)]"
+      class="link font-medium text-[var(--primary)] transition"
       target="_blank"
       href={url("rss.xml")}>RSS</a
     > /
     <a
-      class="link font-medium text-[var(--primary)]"
+      class="link font-medium text-[var(--primary)] transition"
       target="_blank"
       href={url("sitemap-index.xml")}>Sitemap</a
     >
-    <br />
+  </div>
+  <div class="text-50 text-sm transition">
     Powered by
     <a
-      class="link font-medium text-[var(--primary)]"
+      class="link font-medium text-[var(--primary)] transition"
       target="_blank"
       href="https://astro.build">Astro</a
     > &
     <a
-      class="link font-medium text-[var(--primary)]"
+      class="link font-medium text-[var(--primary)] transition"
       target="_blank"
       href="https://github.com/saicaca/fuwari">Fuwari</a
     >

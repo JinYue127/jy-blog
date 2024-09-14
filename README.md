@@ -2,8 +2,8 @@
 
 基于 [Astro](https://astro.build) 和 [Fuwari](https://github.com/saicaca/fuwari)开发的静态博客模板。
 
-![astro version](https://img.shields.io/badge/astro-4.15.4-red)
-![node version](https://img.shields.io/badge/node-20.15.1-blue)
+![astro version](https://img.shields.io/badge/astro-4.15.6-red)
+![node version](https://img.shields.io/badge/node-20.17.0-blue)
 
 [**🖥️在线预览（Vercel）**](https://jy-blog.vercel.app/)&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;
 
