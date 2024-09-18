@@ -7,6 +7,7 @@ interface Props {
   description?: string;
   ogImage?: string;
   keywords?: string[];
+  setOGTypeArticle?: boolean;
 }
 
 const {
@@ -14,6 +15,7 @@ const {
   description = siteConfig.description,
   ogImage,
   keywords,
+  setOGTypeArticle,
 } = Astro.props;
 ---
 
@@ -24,7 +26,7 @@ const {
   openGraph={{
     basic: {
       title: title,
-      type: "article",
+      type: setOGTypeArticle ? "article" : "website",
       image:
         ogImage ||
         "https://user-images.githubusercontent.com/5182256/131216951-8f74f425-f775-463d-a11b-0e01ad9fce8d.png",
