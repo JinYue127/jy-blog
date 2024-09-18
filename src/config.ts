@@ -9,12 +9,12 @@ import { LinkPreset } from "./types/config";
 export const isDev = import.meta.env.DEV;
 export const siteConfig: SiteConfig = {
   title: "JinYue",
-  subtitle: "Demo Site",
+  subtitle: "jy-blog",
   lang: "zh_CN", // 'en', 'zh_CN', 'zh_TW', 'ja', 'ko'
   url: isDev ? "http://localhost:4321/" : "https://jy-blog.vercel.app/",
   updateTime: {
     enable: true,
-    type: "fs",
+    type: "git",
   },
   devMode: {
     showDraftPages: true,
