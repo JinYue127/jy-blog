@@ -149,6 +149,10 @@ export default defineConfig({
         },
       ],
     ],
+    shikiConfig: {
+      theme: "dracula",
+      defaultColor: false,
+    },
   },
   vite: {
     build: {
