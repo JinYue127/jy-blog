@@ -80,6 +80,7 @@ const bannerOffset =
 <html
   lang={siteLang}
   class="bg-[var(--page-bg)] text-[14px] transition md:text-[16px]"
+  data-overlayscrollbars-initialize
 >
   <head>
     <PrintVersion />
@@ -123,6 +124,7 @@ const bannerOffset =
   <body
     class="min-h-screen transition"
     class:list={[{ "lg:is-home": isHomePage, "enable-banner": enableBanner }]}
+    data-overlayscrollbars-initialize
   >
     <SpeedInsights />
     <ConfigCarrier />
@@ -137,7 +139,7 @@ const bannerOffset =
               id="banner"
               alt="Banner image of the blog"
               class:list={[
-                "onload-animation h-full object-cover transition duration-700",
+                "h-full scale-105 object-cover opacity-0 transition duration-700",
               ]}
               src={siteConfig.banner.src}
               position={siteConfig.banner.position}
@@ -183,7 +185,7 @@ const bannerOffset =
       @apply h-[calc(var(--banner-height-home)_-_4.5rem)] transition-all duration-300;
     }
     .enable-banner.is-home #sidebar-sticky {
-      @apply -top-[30vh];
+      @apply top-[calc(-30vh_+_1rem)];
     }
     .navbar-hidden {
       @apply -translate-y-16 opacity-0;
@@ -203,8 +205,8 @@ const bannerOffset =
     getStoredTheme,
     setHue,
     setTheme,
-  } from "../utils/setting-utils";
-  import { pathsEqual, url } from "../utils/url-utils";
+  } from "@utils/setting-utils";
+  import { pathsEqual, url } from "@utils/url-utils";
 
   /* Preload fonts */
   // (async function() {
@@ -322,11 +324,21 @@ function disableAnimation() {
     });
   }
 
+  function showBanner() {
+    const banner = document.getElementById("banner");
+    if (!banner) {
+      console.error("Failed to find the banner element");
+      return;
+    }
+    banner.classList.remove("opacity-0", "scale-105");
+  }
+
   function init() {
     // disableAnimation()()		// TODO
     loadTheme();
     loadHue();
     initCustomScrollbar();
+    showBanner();
   }
 
   /* Load settings when entering the site */
