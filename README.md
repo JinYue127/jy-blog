@@ -2,7 +2,7 @@
 
 基于 [Astro](https://astro.build) 和 [Fuwari](https://github.com/saicaca/fuwari)开发的静态博客模板。
 
-![astro version](https://img.shields.io/badge/astro-4.15.9-red)
+![astro version](https://img.shields.io/badge/astro-4.15.12-red)
 ![node version](https://img.shields.io/badge/node-20.17.0-blue)
 
 [**🖥️在线预览（Vercel）**](https://jy-blog.vercel.app/)&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;
@@ -54,12 +54,12 @@ draft: false
 
 下列指令均需要在项目根目录执行：
 
-| Command                            | Action                                 |
-| :--------------------------------- | :------------------------------------- |
-| `pnpm install` 并 `pnpm add sharp` | 安装依赖                               |
-| `pnpm dev`                         | 在 `localhost:4321` 启动本地开发服务器 |
-| `pnpm build`                       | 构建网站至 `.vercel/output/static`     |
-| `pnpm preview`                     | 本地预览已构建的网站                   |
-| `pnpm new-post`                    | 创建新文章                             |
-| `pnpm astro ...`                   | 执行 `astro add`, `astro check` 等指令 |
-| `pnpm astro --help`                | 显示 Astro CLI 帮助                    |
+| Command                           | Action                            |
+|:----------------------------------|:----------------------------------|
+| `pnpm install` 并 `pnpm add sharp` | 安装依赖                              |
+| `pnpm dev`                        | 在 `localhost:4321` 启动本地开发服务器      |
+| `pnpm build`                      | 构建网站至 `.vercel/output/static`     |
+| `pnpm preview`                    | 本地预览已构建的网站                        |
+| `pnpm new-post`                   | 创建新文章                             |
+| `pnpm astro ...`                  | 执行 `astro add`, `astro check` 等指令 |
+| `pnpm astro --help`               | 显示 Astro CLI 帮助                   |

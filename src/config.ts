@@ -14,7 +14,7 @@ export const siteConfig: SiteConfig = {
   url: isDev ? "http://localhost:4321/" : "https://jy-blog.vercel.app/",
   updateTime: {
     enable: true,
-    type: "git",
+    type: isDev ? "fs" : "git",
   },
   devMode: {
     showDraftPages: true,

@@ -3,8 +3,8 @@ title: JavaScript 进阶问题列表3
 published: 2024-09-18
 description: 从基础到进阶，测试你有多了解 JavaScript
 image: ''
-tags: [ JavaScript,面试 ]
-category: JavaScript
+tags: [ JavaScript ]
+category: 面试
 draft: false
 comments: true
 lang: ''
