@@ -4,7 +4,6 @@ import sitemap from "@astrojs/sitemap";
 import svelte from "@astrojs/svelte";
 import tailwind from "@astrojs/tailwind";
 import vercelStatic from "@astrojs/vercel/static";
-import playformCompress from "@playform/compress";
 import swup from "@swup/astro";
 import icon from "astro-icon";
 import { defineConfig } from "astro/config";
@@ -180,6 +179,9 @@ export default defineConfig({
           define: {
             oklchToHex: oklchToHex,
           },
+        },
+        scss: {
+          api: "modern-compiler", // or 'modern'
         },
       },
     },
