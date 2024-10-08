@@ -75,6 +75,7 @@
     "@tailwindcss/typography": "^0.5.15",
     "@types/markdown-it": "^14.1.2",
     "@types/mdast": "^4.0.4",
+    "@types/react": "^18.3.11",
     "@types/sanitize-html": "^2.13.0",
     "clsx": "^2.1.1",
     "eslint": "^9.12.0",

@@ -78,7 +78,7 @@ export default defineConfig({
         forward: ["dataLayer.push"],
       },
     }),
-    playformCompress({
+    /*playformCompress({
       CSS: true,
       HTML: {
         "html-minifier-terser": {
@@ -92,7 +92,7 @@ export default defineConfig({
       Action: {
         Passed: async () => true, // https://github.com/PlayForm/Compress/issues/376
       },
-    }),
+    }),*/
   ],
   markdown: {
     remarkPlugins: [
