@@ -92,7 +92,7 @@ Gopherfest, November 18, 2015.
 
 ## 链接
 
-这是内部链接 [video](/posts/video)
+这是内部链接 [video](/posts/example/video)
 
 这是外部连接 [React **中文**文档](https://zh-hans.react.dev/)
 

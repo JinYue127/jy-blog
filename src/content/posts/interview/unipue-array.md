@@ -3,8 +3,8 @@ title: 数组去重⽅法总结
 published: 2024-10-08
 description: ''
 image: ''
-tags: [ array ]
-category: JavaScript
+tags: [ JavaScript,array ]
+category: 面试
 draft: false
 comments: true
 lang: ''

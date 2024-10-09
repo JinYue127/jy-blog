@@ -67,9 +67,9 @@ export const profileConfig: ProfileConfig = {
       url: "https://www.bilibili.com/",
     },
     {
-      name: "Steam",
-      icon: "fa6-brands:steam",
-      url: "https://store.steampowered.com",
+      name: "Tiktok",
+      icon: "fa6-brands:tiktok",
+      url: "https://www.douyin.com/",
     },
     {
       name: "GitHub",
