@@ -1,5 +1,5 @@
 ---
-title: 说说JavaScript中的数据类型？存储上的差别？
+title: JavaScript中的数据类型以及存储上的差别
 published: 2024-10-09
 description: ''
 image: ''

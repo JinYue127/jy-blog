@@ -1,5 +1,5 @@
 ---
-title: JavaScript字符串的常用方法有哪些？
+title: JavaScript字符串的常用方法
 published: 2024-10-09
 description: 'JavaScript 28个常用字符串方法及使用技巧'
 image: ''
