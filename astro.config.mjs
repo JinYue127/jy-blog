@@ -3,7 +3,6 @@ import react from "@astrojs/react";
 import sitemap from "@astrojs/sitemap";
 import svelte from "@astrojs/svelte";
 import tailwind from "@astrojs/tailwind";
-import vercelStatic from "@astrojs/vercel/static";
 import playformCompress from "@playform/compress";
 import swup from "@swup/astro";
 import icon from "astro-icon";
@@ -16,7 +15,7 @@ import rehypeSlug from "rehype-slug";
 import remarkDirective from "remark-directive"; /* Handle directives */
 import remarkGithubAdmonitionsToDirectives from "remark-github-admonitions-to-directives";
 import remarkMath from "remark-math";
-import { siteConfig } from "./src/config.ts";
+import { isDev, siteConfig } from "./src/config.ts";
 import { AdmonitionComponent } from "./src/plugins/rehype-component-admonition.mjs";
 import { GithubCardComponent } from "./src/plugins/rehype-component-github-card.mjs";
 import { rehypeImage } from "./src/plugins/rehypeImage";
@@ -43,7 +42,8 @@ const oklchToHex = (str) => {
 // https://astro.build/config
 export default defineConfig({
   site: siteConfig.url,
-  base: "/",
+  base: isDev ? "/" : "/blog",
+  outDir: "./blog",
   integrations: [
     tailwind(),
     swup({
@@ -187,10 +187,4 @@ export default defineConfig({
       },
     },
   },
-  output: "static",
-  adapter: vercelStatic({
-    webAnalytics: {
-      enabled: true,
-    },
-  }),
 });

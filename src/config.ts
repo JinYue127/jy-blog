@@ -11,7 +11,7 @@ export const siteConfig: SiteConfig = {
   title: "JinYue",
   subtitle: "jy-blog",
   lang: "zh_CN", // 'en', 'zh_CN', 'zh_TW', 'ja', 'ko'
-  url: isDev ? "http://localhost:4321/" : "https://jy-blog.vercel.app/",
+  url: isDev ? "http://localhost:4321/" : "https://jinyue.site/blog/",
   updateTime: {
     enable: true,
     type: isDev ? "fs" : "git",
@@ -50,11 +50,7 @@ export const navBarConfig: NavBarConfig = {
 };
 
 export const profileConfig: ProfileConfig = {
-  avatar:
-    // isDev ?
-    "https://www.helloimg.com/i/2024/09/13/66e3deebaa69e.jpg",
-  // :
-  //   "https://jy-blog.vercel.app/android-chrome-512x512.png", // Relative to the /src directory. Relative to the /public directory if it starts with '/'
+  avatar: "https://www.helloimg.com/i/2024/09/13/66e3deebaa69e.jpg",
   name: "Jin Yue",
   bio: "A Frontend Developer",
   twitterId: "test",

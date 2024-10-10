@@ -16,7 +16,6 @@ import {
 } from "@constants/constants";
 import { url, pathsEqual } from "@utils/url-utils";
 import CommonHead from "@components/head/CommonHead.astro";
-import SpeedInsights from "@vercel/speed-insights/astro";
 interface Props {
   title?: string;
   banner?: string;
@@ -126,7 +125,6 @@ const bannerOffset =
     class:list={[{ "lg:is-home": isHomePage, "enable-banner": enableBanner }]}
     data-overlayscrollbars-initialize
   >
-    <SpeedInsights />
     <ConfigCarrier />
     <GlobalStyles>
       {

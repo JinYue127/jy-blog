@@ -11,7 +11,7 @@ export async function GET(context: APIContext) {
   const blog = await getSortedPosts();
 
   return rss({
-    stylesheet: "/rss-styles.xsl",
+    stylesheet: "/blog/rss-styles.xsl",
     title: siteConfig.title,
     description: siteConfig.subtitle || "No description",
     site: context.site ?? siteConfig.url,
@@ -20,7 +20,7 @@ export async function GET(context: APIContext) {
         title: post.data.title,
         pubDate: post.data.published,
         description: post.data.description || "",
-        link: `/posts/${post.slug}/`,
+        link: `/blog/posts/${post.slug}/`,
         content: sanitizeHtml(parser.render(post.body), {
           allowedTags: sanitizeHtml.defaults.allowedTags.concat(["img"]),
         }),
