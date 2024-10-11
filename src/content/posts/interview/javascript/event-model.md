@@ -21,7 +21,7 @@ lang: ''
 - 事件捕获阶段(capture phase)
 - 处于目标阶段(target phase)
 - 事件冒泡阶段(bubbling phase)
-  ![event-model](../../../assets/images/event-model.png)
+  ![event-model](../../../../assets/images/event-model.png)
 
 事件冒泡是一种从下往上的传播方式，由最具体的元素（触发节点）然后逐渐向上传播到最不具体的那个节点，也就是`DOM`中最高层的父节点
 
