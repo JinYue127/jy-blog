@@ -4,7 +4,7 @@ published: 2024-10-09
 description: 'JavaScript 28个常用字符串方法及使用技巧'
 image: ''
 tags: [ JavaScript,string ]
-category: 面试
+category: Interview
 draft: false
 comments: true
 lang: ''

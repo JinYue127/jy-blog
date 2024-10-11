@@ -4,7 +4,7 @@ published: 2024-10-09
 description: ''
 image: ''
 tags: [ JavaScript,array ]
-category: 面试
+category: Interview
 draft: false
 comments: true
 lang: ''
@@ -36,9 +36,7 @@ arr.shift()//[1,2,3,4,5]
 
 ## sort 排序
 
-进行对数组就地排序，不会复制或返回一个新数组，接收可选参数，一个回调函数，有a,b两个参数，当返回a<
-b时返回-1从小到大排序，当返回a>b时返回1从大到小排序，a==b时返回0，保持原来的排序（默认排序是将元素转换为字符串，然后按照它们的
-UTF-16 码元值升序排序。）
+进行对数组就地排序，不会复制或返回一个新数组，接收可选参数，一个回调函数，有a,b两个参数，当返回a<b时返回-1从小到大排序，当返回a>b时返回1从大到小排序，a==b时返回0，保持原来的排序（默认排序是将元素转换为字符串，然后按照它们的 UTF-16 码元值升序排序。）
 
 ```javascript
 const arr = ["March", "Jan", "Feb", "Dec", 6, 2, "A", "a"];
@@ -66,9 +64,7 @@ console.log(arr);//[ 'a', 'A', 2, 6, 'Jan', 'March' ]
 
 ## splice 截取新增数据
 
-可以选择删除数组中的某一个值，也可以在数组中的某个位置添加一些数据，接收可选参数，*
-*三个或以上的参数，第一个为截取的索引位置，number类型，第二个截取的个数，number类型，第三个或更多实在截取位置添加的参数**
-，可以是任何类型
+可以选择删除数组中的某一个值，也可以在数组中的某个位置添加一些数据，接收可选参数，**三个或以上的参数，第一个为截取的索引位置，number类型，第二个截取的个数，number类型，第三个或更多实在截取位置添加的参数**，可以是任何类型
 
 ```javascript
 const arr = ["March", "Jan", 6, 2, "A", "a"];
@@ -83,12 +79,8 @@ console.log(arr);//[ 'March', 'Jan' ]
 ## copyWithin 将数组得一部分赋值到另一个位置
 
 `copyWithin`是一种移动[数组](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array)
-数据的高性能方法，`copyWithin()`
-方法是[通用的](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#%E9%80%9A%E7%94%A8%E6%95%B0%E7%BB%84%E6%96%B9%E6%B3%95)
-。它只期望 `this` 值具有 `length`
-属性和整数键属性。虽然字符串也是类似数组的，但这种方法不适用于它们，因为字符串是不可变的。  
-`copyWithin`
-不会改变数组的长度，只会修改内容，它接收三个参数，第一个为复制到的目标位置（索引值），第二个是复制的起始位置（可选），如果为负数，则相当于从后往前数，第三个为结束位置，不包含此索引的位置（可选），起始位置不可小于结束位置，否者方法无效。并返回这个数组。
+数据的高性能方法，`copyWithin()`方法是[通用的](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#%E9%80%9A%E7%94%A8%E6%95%B0%E7%BB%84%E6%96%B9%E6%B3%95)。它只期望 `this` 值具有 `length`
+属性和整数键属性。虽然字符串也是类似数组的，但这种方法不适用于它们，因为字符串是不可变的。`copyWithin`不会改变数组的长度，只会修改内容，它接收三个参数，第一个为复制到的目标位置（索引值），第二个是复制的起始位置（可选），如果为负数，则相当于从后往前数，第三个为结束位置，不包含此索引的位置（可选），起始位置不可小于结束位置，否者方法无效。并返回这个数组。
 
 ```javascript
 const arr1 = ["March", "Jan", 6, 2, "A", "a"];
@@ -109,8 +101,7 @@ console.log(newArr);//[ 'March', 'Jan', 6, 2, 'A', 'a' ]
 
 ## fill 填充
 
-对数组内容进行覆盖填充，有三个参数，第一个为填充的值，第二个为起始位置（可选），第三个为结束位置，不包含此索引位置（可选）。与
-`copyWithin`比较类似，只不过一个是移动数组内的元素，一个填充数组的内的元素，不会改变数组的长度。并返回这个数组
+对数组内容进行覆盖填充，有三个参数，第一个为填充的值，第二个为起始位置（可选），第三个为结束位置，不包含此索引位置（可选）。与`copyWithin`比较类似，只不过一个是移动数组内的元素，一个填充数组的内的元素，不会改变数组的长度。并返回这个数组
 
 ```javascript
 const arr1 = ["March", "Jan", 6, 2, "A", "a"];

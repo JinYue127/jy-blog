@@ -4,7 +4,7 @@ published: 2024-10-09
 description: '什么是防抖和节流？有什么区别？如何实现？'
 image: ''
 tags: [ JavaScript ]
-category: 面试
+category: Interview
 draft: false
 comments: true
 lang: ''

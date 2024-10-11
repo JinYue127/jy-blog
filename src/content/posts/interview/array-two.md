@@ -4,7 +4,7 @@ published: 2024-10-09
 description: ''
 image: ''
 tags: [ JavaScript,array ]
-category: 面试
+category: Interview
 draft: false
 comments: true
 lang: ''
