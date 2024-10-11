@@ -4,7 +4,7 @@ published: 2024-10-08
 description: ''
 image: ''
 tags: [ React,Vue ]
-category: 面试
+category: Interview
 draft: false
 comments: true
 lang: ''

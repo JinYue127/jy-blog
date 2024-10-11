@@ -4,7 +4,7 @@ published: 2024-10-09
 description: '== 和 ===区别，分别在什么情况使用'
 image: ''
 tags: [ JavaScript ]
-category: 面试
+category: Interview
 draft: false
 comments: true
 lang: ''

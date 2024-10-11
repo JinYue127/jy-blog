@@ -4,7 +4,7 @@ published: 2024-09-18
 description: 从基础到进阶，测试你有多了解 JavaScript
 image: ''
 tags: [ JavaScript ]
-category: 面试
+category: Interview
 draft: false
 comments: true
 lang: ''

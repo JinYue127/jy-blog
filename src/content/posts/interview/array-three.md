@@ -4,7 +4,7 @@ published: 2024-10-09
 description: ''
 image: ''
 tags: [ JavaScript,array ]
-category: 面试
+category: Interview
 draft: false
 comments: true
 lang: ''
@@ -187,8 +187,7 @@ console.log(newArr);//0
 
 ## findLast 从右向左查找符合条件的元素
 
-**此方法兼容性不好，暂时不推荐使用，node版本需要18.0.0以上** 与`find`使用方法一致，`findLast`从右向左查找符合条件的的一个元素，并返回那个元素,没有则返回
-`undefined`，接收一个回调函数，回调函数有三个形参，第一个当前元素，第二个当前索引，第三个数组本身
+**此方法兼容性不好，暂时不推荐使用，node版本需要18.0.0以上** 与`find`使用方法一致，`findLast`从右向左查找符合条件的的一个元素，并返回那个元素,没有则返回`undefined`，接收一个回调函数，回调函数有三个形参，第一个当前元素，第二个当前索引，第三个数组本身
 
 ```javascript
 const arr = ["March", "Jan", 6, 2, "A", 6, "a"];
@@ -209,8 +208,7 @@ console.log(newArr);//{ id: 5 }
 
 ## findLastIndex 从右向左查找符合条件的元素,返回索引版
 
-**此方法兼容性不好，暂时不推荐使用，node版本需要18.0.0以上** 与`findLast`使用方法一致，`findLastIndex`
-从右向左查找符合条件的的一个元素，并返回那个元素的索引值,没有则返回-1，接收一个回调函数，回调函数有三个形参，第一个当前元素，第二个当前索引，第三个数组本身
+**此方法兼容性不好，暂时不推荐使用，node版本需要18.0.0以上** 与`findLast`使用方法一致，`findLastIndex` 从右向左查找符合条件的的一个元素，并返回那个元素的索引值,没有则返回-1，接收一个回调函数，回调函数有三个形参，第一个当前元素，第二个当前索引，第三个数组本身
 
 ```javascript
 const arr = ["March", "Jan", 6, 2, "A", 6, "a"];
@@ -231,7 +229,7 @@ console.log(newArr);//4
 
 ## at 返回索引位置的值
 
-**此方法兼容性一般，暂时不推荐使用，node版本需要16.6.0以上** at接收一个number的参数，可以为负数，正数时获取到索引为的值，当参数为负数时，从右向左查找对应的值
+**此方法兼容性一般，暂时不推荐使用，node版本需要16.6.0以上** at 接收一个number的参数，可以为负数，正数时获取到索引为的值，当参数为负数时，从右向左查找对应的值
 
 ```javascript
 const arr = ["March", "Jan", 6, 2, "A", "a"];
@@ -257,9 +255,7 @@ const newArr = Array.of(6);
 const arr = Array(6);
 //传入6 of则创建一个只包含6得数组，Array传入6则创建有六个空位置得数组
 console.log(newArr, arr);
-[6] [<6 empty
-items >
-]
+[6] [<6 emptyitems >]
 ```
 
 ## flat 扁平化数组
@@ -279,11 +275,7 @@ console.log(newArr);//[ 'March', 'Jan', 6, 2, 'A', 'a' ]
 
 ## every 所有元素是否通过测试
 
-`every`用于所有元素是否都能通过测试，返回一个布尔值，只有当所有元素都通过了测试，才会返回`true`
-，接收一个回调函数，回调函数有三个形参，第一个为当前元素，第二个为当前索引，第三个为数组本身，*
-*另外，当数组为空的时候使用every，条件不论是怎么样的，都会返回true（这种情况属于
-**[无条件正确](https://en.wikipedia.org/wiki/Vacuous_truth)**，因为
-**[空集](https://zh.wikipedia.org/wiki/%E7%A9%BA%E9%9B%86)**的所有元素都符合给定的条件。）**
+`every`用于所有元素是否都能通过测试，返回一个布尔值，只有当所有元素都通过了测试，才会返回`true`，接收一个回调函数，回调函数有三个形参，第一个为当前元素，第二个为当前索引，第三个为数组本身，**另外，当数组为空的时候使用every，条件不论是怎么样的，都会返回true（这种情况属于**[无条件正确](https://en.wikipedia.org/wiki/Vacuous_truth)**，因为**[空集](https://zh.wikipedia.org/wiki/%E7%A9%BA%E9%9B%86)**的所有元素都符合给定的条件。）**
 
 ```javascript
 const arr = ["March", "Jan", 6, 2, "A", "a"];
@@ -310,8 +302,7 @@ console.log([].some((item) => item == undefined));//false
 
 ## join 选定格式转换成字符串
 
-join用于将数组转换成字符串的方法，接收一个参数（**可以为任意类型，但引用类型则会默认转换成****[****object Object****]****等
-**），为数组元素转换成字符串的间隔符，不传参数默认以 ‘，’号隔开
+join用于将数组转换成字符串的方法，接收一个参数（**可以为任意类型，但引用类型则会默认转换成** **[****object Object****]** **等**），为数组元素转换成字符串的间隔符，不传参数默认以 ‘，’号隔开
 
 ```javascript
 const arr = ["March", "Jan", 6, 2, "A", "a"];
@@ -327,8 +318,7 @@ console.log(newArr);//March[object Object]Jan[object Object]6[object Object]2[ob
 
 ## toString 转换成字符串
 
-`toString`是几乎所有数据类型都有的一个方法，就是单纯的转换成字符串，数组中转换成字符串默认以‘，’号隔开，*
-*有一个小技巧，如果多维数组的类型都是值类型的，可以使用toString进行扁平化**
+`toString`是几乎所有数据类型都有的一个方法，就是单纯的转换成字符串，数组中转换成字符串默认以‘，’号隔开，**有一个小技巧，如果多维数组的类型都是值类型的，可以使用toString进行扁平化**
 
 ```javascript
 //简单的数组转字符串
@@ -346,11 +336,7 @@ console.log(newArr);//[ 'March', 'Jan', '6', '2', 'A', 'a' ]
 ## toLocaleString
 
 此方法用于格式转换，最后返回字符串代表数组中所有的元素，接收两个参数第一个带有 BCP 47 语言标签的字符串，或者此类字符串的数组。对于
-`locales` 参数的一般形式和说明，可以参见
-`Intl`[ 主页面的参数说明](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_%E5%8F%82%E6%95%B0)
-。第二个，一个具有配置属性的对象。对于数字，请参见 `Number.prototype.toLocaleString()`；对于日期，请参见
-`Date.prototype.toLocaleString()`。
-
+`locales` 参数的一般形式和说明，可以参见`Intl`[ 主页面的参数说明](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_%E5%8F%82%E6%95%B0)。第二个，一个具有配置属性的对象。对于数字，请参见 `Number.prototype.toLocaleString()`；对于日期，请参见`Date.prototype.toLocaleString()`。
 此方法的使用方法记得东西比较多，详细使用方法可以点击上面的链接查看
 
 ```javascript
@@ -364,8 +350,7 @@ console.log(newArr);//￥7,500,8,123,12
 
 ## entries 返回数组迭代器的对象，包含键和值
 
-返回一个数组迭代器对象，[数组迭代器](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/@@iterator)（
-array[Symbol.iterator]）,如果不太清楚的可以看一下Symbol篇章，或者点击数组迭代器查看
+返回一个数组迭代器对象，[数组迭代器](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/@@iterator)（ array[Symbol.iterator]）,如果不太清楚的可以看一下Symbol篇章，或者点击数组迭代器查看
 
 ```javascript
 const arr = ["March", "Jan", 6, 2, "A", "a"];
