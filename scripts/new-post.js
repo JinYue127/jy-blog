@@ -45,8 +45,8 @@ title: ${title}
 published: ${getDate()}
 description: ${description}
 image: ''
-tags: []
-category: ${category}
+tags: [ JavaScript ]
+category: Interview
 draft: false 
 comments: true 
 lang: ''
