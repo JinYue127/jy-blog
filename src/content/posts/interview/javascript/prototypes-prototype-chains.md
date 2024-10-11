@@ -49,7 +49,7 @@ console.log(doSomething.prototype);
 上面这个对象，就是大家常说的原型对象
 
 可以看到，原型对象有一个自有属性`constructor`，这个属性指向该函数，如下图关系展示
-![prototype.png](../../../assets/images/prototype.png)
+![prototype.png](../../../../assets/images/prototype.png)
 
 ## 原型链
 
@@ -74,7 +74,7 @@ var person = new Person('person')
 ```
 
 根据代码，我们可以得到下图
-![prototype2.png](../../../assets/images/prototype2.png)
+![prototype2.png](../../../../assets/images/prototype2.png)
 
 下面分析一下：
 
@@ -90,7 +90,7 @@ var person = new Person('person')
 下面首先要看几个概念：
 
 `__proto__`作为不同对象之间的桥梁，用来指向创建它的构造函数的原型对象的
-![prototype3.png](../../../assets/images/prototype3.png)
+![prototype3.png](../../../../assets/images/prototype3.png)
 
 每个对象的`__proto__`都是指向它的构造函数的原型对象`prototype`的
 

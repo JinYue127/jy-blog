@@ -109,7 +109,7 @@ bar()
 ```
 
 上述代码改变成一张图
-![scope-chain.png](../../../assets/images/scope-chain.png)
+![scope-chain.png](../../../../assets/images/scope-chain.png)
 
 由于`JavaScript`遵循词法作用域，相同层级的 `foo` 和 `bar` 就没有办法访问到彼此块作用域中的变量，所以输出2
 
@@ -122,7 +122,7 @@ bar()
 这里拿《你不知道的Javascript(上)》中的一张图解释：
 
 把作用域比喻成一个建筑，这份建筑代表程序中的嵌套作用域链，第一层代表当前的执行作用域，顶层代表全局作用域
-![scope-chain2.png](../../../assets/images/scope-chain2.png)
+![scope-chain2.png](../../../../assets/images/scope-chain2.png)
 
 变量的引用会顺着当前楼层进行查找，如果找不到，则会往上一层找，一旦到达顶层，查找的过程都会停止
 

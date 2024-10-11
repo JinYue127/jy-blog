@@ -167,7 +167,7 @@ function deepClone(obj, hash = new WeakMap()) {
 ## 区别
 
 下面首先借助两张图，可以更加清晰看到浅拷贝与深拷贝的区别
-![copy.png](../../../assets/images/copy.png)
+![copy.png](../../../../assets/images/copy.png)
 
 从上图发现，浅拷贝和深拷贝都创建出一个新的对象，但在复制对象属性的时候，行为就不一样
 

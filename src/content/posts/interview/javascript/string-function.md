@@ -10,7 +10,7 @@ comments: true
 lang: ''
 ---
 
-![JS字符串方法.png](../../../assets/images/string-function.png)
+![JS字符串方法.png](../../../../assets/images/string-function.png)
 
 ## 获取字符串长度
 

@@ -88,7 +88,7 @@ t.sayName() // 'Tom'
 ```
 
 流程图如下：
-![new](../../../assets/images/new.png)
+![new](../../../../assets/images/new.png)
 
 ## 手写new操作符
 
