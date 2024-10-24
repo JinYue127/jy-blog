@@ -13,7 +13,7 @@ function getDate() {
 }
 
 function getPostFullPath(fileName) {
-  return path.join("./src/content/posts/interview/es6", `${fileName}.md`);
+  return path.join("./src/content/posts/interview/vue", `${fileName}.md`);
 }
 
 const fileName = await input({
@@ -45,7 +45,7 @@ title: ${title}
 published: ${getDate()}
 description: ${description}
 image: ''
-tags: [ JavaScript, es6 ]
+tags: [ vue ]
 category: Interview
 draft: false 
 comments: true 
