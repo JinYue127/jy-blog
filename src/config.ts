@@ -11,7 +11,7 @@ export const siteConfig: SiteConfig = {
   title: "JinYue",
   subtitle: "jy-blog",
   lang: "zh_CN", // 'en', 'zh_CN', 'zh_TW', 'ja', 'ko'
-  url: isDev ? "http://localhost:4321/" : "https://jy-blog.vercel.app/",
+  url: isDev ? "http://localhost:4321/" : "https://jinyue.site/blog/",
   updateTime: {
     enable: true,
     type: isDev ? "fs" : "git",

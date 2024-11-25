@@ -3,7 +3,7 @@ import react from "@astrojs/react";
 import sitemap from "@astrojs/sitemap";
 import svelte from "@astrojs/svelte";
 import tailwind from "@astrojs/tailwind";
-import vercelStatic from "@astrojs/vercel/static";
+// import vercelStatic from "@astrojs/vercel/static";
 import swup from "@swup/astro";
 import icon from "astro-icon";
 import { defineConfig } from "astro/config";
@@ -42,7 +42,8 @@ const oklchToHex = (str) => {
 // https://astro.build/config
 export default defineConfig({
   site: siteConfig.url,
-  base: "/",
+  base: "/blog",
+  outDir: "./blog",
   experimental: {
     contentCollectionCache: true,
   },
@@ -174,10 +175,10 @@ export default defineConfig({
       },
     },
   },
-  output: "static",
-  adapter: vercelStatic({
-    webAnalytics: {
-      enabled: true,
-    },
-  }),
+  // output: "static",
+  // adapter: vercelStatic({
+  //   webAnalytics: {
+  //     enabled: true,
+  //   },
+  // }),
 });

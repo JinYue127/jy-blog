@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro check && astro build && pagefind --site .vercel/output/static",
+    "build": "astro check && astro build && pagefind --site blog",
     "preview": "astro preview",
     "astro": "astro",
     "changeset": "changeset",
