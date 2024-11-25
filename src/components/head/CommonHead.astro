@@ -1,0 +1,104 @@
+---
+import { siteConfig, profileConfig } from "@config";
+import { SEO } from "astro-seo";
+
+interface Props {
+  title?: string;
+  description?: string;
+  ogImage?: string;
+  keywords?: string[];
+  setOGTypeArticle?: boolean;
+}
+
+const {
+  title = siteConfig.title,
+  description = siteConfig.description,
+  ogImage,
+  keywords,
+  setOGTypeArticle,
+} = Astro.props;
+---
+
+<SEO
+  title={title}
+  description={description}
+  charset="utf-8"
+  openGraph={{
+    basic: {
+      title: title,
+      type: setOGTypeArticle ? "article" : "website",
+      image:
+        ogImage ||
+        "https://user-images.githubusercontent.com/5182256/131216951-8f74f425-f775-463d-a11b-0e01ad9fce8d.png",
+    },
+  }}
+  twitter={{
+    creator: profileConfig.twitterId,
+  }}
+  extend={{
+    // extending the default link tags
+
+    link: [
+      {
+        rel: "apple-touch-icon",
+        href: "/apple-touch-icon.png",
+        sizes: "180x180",
+      },
+      {
+        rel: "icon",
+        href: "/favicon-32x32.png",
+        sizes: "32x32",
+      },
+      {
+        rel: "icon",
+        href: "/favicon-16x16.png",
+        sizes: "16x16",
+      },
+      {
+        rel: "manifest",
+        href: "/site.webmanifest",
+      },
+      {
+        rel: "sitemap",
+        href: "/sitemap-index.xml",
+      },
+      {
+        rel: "canonical",
+        href: new URL(Astro.url.pathname, Astro.site).toString(),
+      },
+      {
+        rel: "alternate",
+        type: "application/rss+xml",
+        title: siteConfig.title,
+        href: new URL("rss.xml", Astro.site).toString(),
+      },
+      {
+        rel: "stylesheet",
+        integrity:
+          "sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV",
+        crossOrigin: "anonymous",
+        href: "https://cdn.staticfile.net/KaTeX/0.16.9/katex.min.css",
+      },
+    ],
+    // extending the default meta tags
+
+    meta: [
+      {
+        name: "viewport",
+        content: "width=device-width, initial-scale=1.0",
+      },
+      {
+        name: "author",
+        content: profileConfig.name,
+      },
+      {
+        name: "keywords",
+        content: keywords?.toString() ?? "",
+      },
+      {
+        name: "generator",
+        content: Astro.generator,
+      },
+    ],
+  }}
+/>

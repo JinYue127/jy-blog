@@ -1,0 +1,16 @@
+---
+import { version } from "@/../package.json";
+---
+
+<script is:inline type="text/partytown" define:vars={{ version }}>
+  console.log(
+    `%c blog ${version} %c https://jy-blog.vercel.app/ `,
+    "color: #fff; margin: 1em 0; padding: 5px 0; background: #ef8f99;",
+    "margin: 1em 0; padding: 5px 0; background: #efefef;",
+  );
+  console.log(
+    `%c blog ${version} %c https://jinyue.site/blog/ `,
+    "color: #fff; margin: 1em 0; padding: 5px 0; background: #ef8f99;",
+    "margin: 1em 0; padding: 5px 0; background: #efefef;",
+  );
+</script>

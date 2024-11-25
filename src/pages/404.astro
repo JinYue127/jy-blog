@@ -1,0 +1,38 @@
+---
+import MainGridLayout from "@layouts/MainGridLayout.astro";
+import { url } from "@utils/url-utils";
+import { Icon } from "astro-icon/components";
+---
+
+<MainGridLayout title="Not found">
+  <div
+    class="relative min-h-32 w-full overflow-hidden rounded-[var(--radius-large)]"
+  >
+    <div
+      class="card-base relative z-10 w-full px-9 py-6 text-black/75 dark:text-white/75"
+    >
+      <div class="flex items-center gap-4">
+        <h1 class="text-[5rem] font-bold">404</h1>
+        <p class="text-[2rem]">Not found</p>
+      </div>
+      <a
+        href={url("/")}
+        class:list={["overflow-hidden font-bold active:scale-95"]}
+      >
+        <div
+          class="btn-card flex h-[3.75rem] max-w-fit items-center justify-start gap-2 rounded-2xl px-4"
+        >
+          <div
+            class="overflow-hidden overflow-ellipsis whitespace-nowrap text-black/75 transition dark:text-white/75"
+          >
+            Return to HomePage
+          </div>
+          <Icon
+            name="material-symbols:chevron-right-rounded"
+            class="text-[1.75rem] text-black/75 dark:text-white/75"
+          />
+        </div>
+      </a>
+    </div>
+  </div>
+</MainGridLayout>
