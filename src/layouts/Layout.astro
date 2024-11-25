@@ -30,6 +30,7 @@ interface Props {
   ogImage?: string;
   keywords?: string[];
   setOGTypeArticle?: boolean;
+  showChatway?: boolean;
 }
 
 let {
@@ -40,6 +41,7 @@ let {
   ogImage,
   keywords = [],
   setOGTypeArticle,
+  showChatway = true,
 } = Astro.props;
 
 // apply a class to the body element to decide the height of the banner, only used for initial page load
@@ -106,7 +108,7 @@ const bannerOffset =
       keywords={keywords}
       setOGTypeArticle={setOGTypeArticle}
     />
-    <Chatway />
+    {showChatway && <Chatway />}
     <style
       define:vars={{
         configHue,
