@@ -138,7 +138,7 @@ const { remarkPluginFrontmatter } = await entry.render();
       <a
         href={url}
         aria-label={title}
-        class="btn-regular absolute bottom-3 right-3 top-3 hidden w-[3.25rem] rounded-xl bg-[var(--enter-btn-bg)] hover:bg-[var(--enter-btn-bg-hover)] active:scale-95 active:bg-[var(--enter-btn-bg-active)] md:flex"
+        class="btn-regular absolute bottom-3 right-3 top-3 !hidden w-[3.25rem] rounded-xl bg-[var(--enter-btn-bg)] hover:bg-[var(--enter-btn-bg-hover)] active:scale-95 active:bg-[var(--enter-btn-bg-active)] md:!flex"
       >
         <Icon
           name="material-symbols:chevron-right-rounded"
@@ -153,5 +153,4 @@ const { remarkPluginFrontmatter } = await entry.render();
 >
 </div>
 
-<style lang="stylus" define:vars={{coverWidth}}>
-</style>
+<style define:vars={{ coverWidth }}></style>
