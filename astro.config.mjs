@@ -27,7 +27,7 @@ import { remarkReadingTime } from "./src/plugins/remark-reading-time.mjs";
 import { remarkEmbed } from "./src/plugins/remarkEmbed.mjs";
 import { remarkSpoiler } from "./src/plugins/remarkSpoiler.mjs";
 import { rawFonts } from "./src/plugins/vite-raw-fonts.mjs";
-
+import remarkSectionize from "remark-sectionize";
 // https://astro.build/config
 export default defineConfig({
   site: siteConfig.url,
@@ -83,6 +83,7 @@ export default defineConfig({
       remarkModifiedTime,
       parseDirectiveNode,
       remarkSpoiler,
+      remarkSectionize,
       remarkDeruntify,
     ],
     rehypePlugins: [
