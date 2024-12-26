@@ -2,12 +2,12 @@
 
 基于 [Astro](https://astro.build) 和 [Fuwari](https://github.com/saicaca/fuwari)开发的静态博客模板。
 
-![astro version](https://img.shields.io/badge/astro-4.16.13-red)
+![astro version](https://img.shields.io/badge/astro-4.16.17-red)
 ![node version](https://img.shields.io/badge/node-20.17.0-blue)
 
 [**🖥️在线预览（Vercel）**](https://jy-blog.vercel.app/)&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;[**🖥️在线预览（国内）**](https://jinyue.site/blog/)
 
-> README 版本：`2024-11-25`
+> README 版本：`2024-12-26`
 
 ## 📷 Screenshots
 
