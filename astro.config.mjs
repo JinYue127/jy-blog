@@ -7,7 +7,6 @@ import tailwind from "@astrojs/tailwind";
 import swup from "@swup/astro";
 import icon from "astro-icon";
 import { defineConfig } from "astro/config";
-import Color from "colorjs.io";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypeComponents from "rehype-components"; /* Render the custom directive content */
 import rehypeKatex from "rehype-katex";
@@ -29,16 +28,6 @@ import { remarkEmbed } from "./src/plugins/remarkEmbed.mjs";
 import { remarkSpoiler } from "./src/plugins/remarkSpoiler.mjs";
 import { rawFonts } from "./src/plugins/vite-raw-fonts.mjs";
 
-const oklchToHex = (str) => {
-  const DEFAULT_HUE = 250;
-  const regex = /-?\d+(\.\d+)?/g;
-  const matches = str.string.match(regex);
-  const lch = [matches[0], matches[1], DEFAULT_HUE];
-  return new Color("oklch", lch).to("srgb").toString({
-    format: "hex",
-  });
-};
-
 // https://astro.build/config
 export default defineConfig({
   site: siteConfig.url,
@@ -48,7 +37,9 @@ export default defineConfig({
     contentCollectionCache: true,
   },
   integrations: [
-    tailwind(),
+    tailwind({
+      nesting: true,
+    }),
     swup({
       theme: false,
       animationClass: "transition-swup-", // see https://swup.js.org/options/#animationselector
@@ -162,18 +153,6 @@ export default defineConfig({
       exclude: ["@resvg/resvg-js"],
     },
     plugins: [rawFonts([".woff2", ".ttf", ".woff", ".otf"])],
-    css: {
-      preprocessorOptions: {
-        stylus: {
-          define: {
-            oklchToHex: oklchToHex,
-          },
-        },
-        scss: {
-          api: "modern-compiler", // or 'modern'
-        },
-      },
-    },
   },
   // output: "static",
   // adapter: vercelStatic({

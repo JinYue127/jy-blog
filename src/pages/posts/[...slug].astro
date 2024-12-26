@@ -144,7 +144,7 @@ const { remarkPluginFrontmatter } = await entry.render();
     >
       {
         entry.data.nextSlug && (
-          <div class="btn-card flex h-[3.75rem] w-full max-w-full items-center justify-start gap-4 rounded-2xl px-4">
+          <div class="btn-card flex h-[3.75rem] w-full max-w-full items-center !justify-start gap-4 rounded-2xl px-4">
             <Icon
               name="material-symbols:chevron-left-rounded"
               class="text-[2rem] text-[var(--primary)]"
@@ -166,7 +166,7 @@ const { remarkPluginFrontmatter } = await entry.render();
     >
       {
         entry.data.prevSlug && (
-          <div class="btn-card flex h-[3.75rem] w-full max-w-full items-center justify-end gap-4 rounded-2xl px-4">
+          <div class="btn-card flex h-[3.75rem] w-full max-w-full items-center !justify-end gap-4 rounded-2xl px-4">
             <div class="max-w-[calc(100%_-_3rem)] overflow-hidden overflow-ellipsis whitespace-nowrap text-black/75 transition dark:text-white/75">
               {entry.data.prevTitle}
             </div>
@@ -183,29 +183,3 @@ const { remarkPluginFrontmatter } = await entry.render();
     {entry.data.comments && <PostComments client:only="react" />}
   </div>
 </MainGridLayout>
-
-<style is:global>
-  #post-container :nth-child(1) {
-    animation-delay: calc(var(--content-delay) + 0ms);
-  }
-
-  #post-container :nth-child(2) {
-    animation-delay: calc(var(--content-delay) + 50ms);
-  }
-
-  #post-container :nth-child(3) {
-    animation-delay: calc(var(--content-delay) + 100ms);
-  }
-
-  #post-container :nth-child(4) {
-    animation-delay: calc(var(--content-delay) + 175ms);
-  }
-
-  #post-container :nth-child(5) {
-    animation-delay: calc(var(--content-delay) + 250ms);
-  }
-
-  #post-container :nth-child(6) {
-    animation-delay: calc(var(--content-delay) + 325ms);
-  }
-</style>
