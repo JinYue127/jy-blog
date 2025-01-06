@@ -161,10 +161,6 @@
     @apply bg-transparent;
   }
 
-  .custom-md h1 {
-    @apply text-3xl;
-  }
-
   .table-wrapper {
     @apply my-5 overflow-x-auto;
   }
