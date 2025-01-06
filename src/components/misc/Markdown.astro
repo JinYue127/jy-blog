@@ -42,7 +42,7 @@ const className = Astro.props.class;
 
       let copyButton = document.createElement("button");
       copyButton.className =
-        "copy-btn btn-regular-dark absolute active:scale-90 h-8 w-8 top-2 right-2 opacity-75 text-sm p-1.5 rounded-lg transition-all ease-in-out hidden";
+        "copy-btn btn-regular-dark absolute active:scale-90 h-8 w-8 top-2 right-2 opacity-75 text-sm p-1.5 rounded-lg transition-all ease-in-out invisible";
 
       codeBlock.setAttribute("tabindex", "0");
       if (codeBlock.parentNode) {
@@ -55,7 +55,7 @@ const className = Astro.props.class;
       `;
       let dataLang = document.createElement("div");
       dataLang.className =
-        "dataLang absolute h-8 w-auto top-0.5 right-2 text-xs text-right p-1.5 rounded-lg transition-all ease-in-out";
+        "dataLang text-gray-400 absolute h-8 w-auto top-0.5 right-2 text-xs text-right p-1.5 rounded-lg transition-all ease-in-out";
       dataLang.innerHTML = `
         <div>${codeBlock.getAttribute("data-language")}</div>
       `;
@@ -65,11 +65,11 @@ const className = Astro.props.class;
       wrapper.appendChild(dataLang);
 
       wrapper.onmouseover = () => {
-        copyButton.style.display = "block";
+        copyButton.style.visibility = "visible";
         dataLang.style.display = "none";
       };
       wrapper.onmouseout = () => {
-        copyButton.style.display = "none";
+        copyButton.style.visibility = "hidden";
         dataLang.style.display = "block";
       };
 
