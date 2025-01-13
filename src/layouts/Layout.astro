@@ -19,6 +19,8 @@ import {
 import { url, pathsEqual } from "@utils/url-utils";
 import CommonHead from "@components/head/CommonHead.astro";
 import Chatway from "@components/head/Chatway.astro";
+import SpeedInsights from "@vercel/speed-insights/astro";
+import "katex/dist/katex.css";
 // import SpeedInsights from "@vercel/speed-insights/astro";
 
 interface Props {
@@ -166,7 +168,7 @@ const bannerOffset =
     class:list={[{ "lg:is-home": isHomePage, "enable-banner": enableBanner }]}
     data-overlayscrollbars-initialize
   >
-    <!--<SpeedInsights />-->
+    <SpeedInsights />
     <ConfigCarrier />
     <slot />
     <ToastContainer client:only="react" />
