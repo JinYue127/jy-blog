@@ -90,5 +90,9 @@
       @apply content-none;
     }
   }
+
+  .dataLang {
+    color: var(--primary);
+  }
 }
 
