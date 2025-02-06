@@ -51,6 +51,11 @@ export const navBarConfig: NavBarConfig = {
       url: "https://github.com/JinYue127/jy-blog", // Internal links should not include the base path, as it is automatically added
       external: true, // Show an external link icon and will open in a new tab
     },
+    {
+      name: "Radash",
+      url: "https://jinyue.site/radash-study/", // Internal links should not include the base path, as it is automatically added
+      external: true, // Show an external link icon and will open in a new tab
+    },
   ],
 };
 
