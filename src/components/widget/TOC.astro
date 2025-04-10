@@ -296,5 +296,7 @@ const maxLevel = siteConfig.toc.depth;
     }
   }
 
-  customElements.define("table-of-contents", TableOfContents);
+  if (!customElements.get("table-of-contents")) {
+    customElements.define("table-of-contents", TableOfContents);
+  }
 </script>

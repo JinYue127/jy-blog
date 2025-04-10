@@ -43,7 +43,7 @@ const License = (props: Props) => {
           <div className="text-sm text-black/30 transition dark:text-white/30">
             {i18n(I18nKey.author)}
           </div>
-          <div className="whitespace-nowrap text-black/75 transition dark:text-white/75">
+          <div className="line-clamp-2 text-black/75 transition dark:text-white/75">
             {profileConf.name}
           </div>
         </div>
@@ -51,7 +51,7 @@ const License = (props: Props) => {
           <div className="text-sm text-black/30 transition dark:text-white/30">
             {i18n(I18nKey.publishedAt)}
           </div>
-          <div className="whitespace-nowrap text-black/75 transition dark:text-white/75">
+          <div className="line-clamp-2 text-black/75 transition dark:text-white/75">
             {formatDateToYYYYMMDD(pubDate)}
           </div>
         </div>
@@ -59,7 +59,7 @@ const License = (props: Props) => {
           <div className="text-sm text-black/30 transition dark:text-white/30">
             {i18n(I18nKey.lastModified)}
           </div>
-          <div className="whitespace-nowrap text-black/75 transition dark:text-white/75">
+          <div className="line-clamp-2 text-black/75 transition dark:text-white/75">
             {formatDateToYYYYMMDD(lastModified)}
           </div>
         </div>
@@ -70,7 +70,7 @@ const License = (props: Props) => {
           <a
             href={licenseConf.url}
             target="_blank"
-            className="link whitespace-nowrap text-[var(--primary)]"
+            className="link line-clamp-2 text-[var(--primary)]"
           >
             {licenseConf.name}
           </a>
